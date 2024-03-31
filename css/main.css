@@ -1,0 +1,76 @@
+* {
+    outline: 1px red solid;
+}
+
+.hidden {
+    display: none;
+}
+
+html, body, h1, p {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 14px;
+    background-color: rgb(116, 84, 136);
+    background-image: url('../img/bg_dragonball.jpg');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgb(209, 77, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('../img/denim.png');
+    background-blend-mode: color-dodge;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 40%);
+    box-shadow: 0 0 14px 0 black;
+}
+
+header p {
+    margin: 20px 80px 36px;
+}
+
+#main-logo {
+    width: 380px;
+    margin: 35px auto 22px;
+}
+
+#listblock {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#listblock section {
+    margin: 15px 10px;
+}
+
+
+#todo h2::after {
+    content: "✨";
+    margin-left: 5px;
+}
+
+#inprogress h2::after {
+    content: "🏅";
+    margin-left: 5px;
+}
+
+#done h2::after {
+    content: "🏆";
+    margin-left: 5px;
+}
+
+input[type="checkbox"]:checked + span::after {
+    content: "💪";
+    margin-left: 5px;
+}

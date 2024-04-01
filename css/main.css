@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px red solid;
-}
+} */
 
 .hidden {
     display: none;
@@ -16,12 +16,12 @@ body {
     font-family: "Poppins", sans-serif;
     color: white;
     font-size: 14px;
-    background-color: rgb(116, 84, 136);
+    background-color: rgba(116, 84, 136, 80%);
     background-image: url('../img/bg_dragonball.jpg');
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 
 header {
@@ -31,17 +31,27 @@ header {
     text-align: center;
     background-image: url('../img/denim.png');
     background-blend-mode: color-dodge;
-    text-shadow: 0px 3px 5px rgba(0, 0, 0, 40%);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 75%);
     box-shadow: 0 0 14px 0 black;
+    border-bottom: 3px solid #fff;
 }
 
 header p {
     margin: 20px 80px 36px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
 }
 
 #main-logo {
     width: 380px;
-    margin: 35px auto 22px;
+    margin: 40px auto 30px;
+    animation: float 3.5s ease-out infinite;
+}
+
+@keyframes float {
+    50% {transform: translateY(8px);}
 }
 
 #listblock {
@@ -50,18 +60,71 @@ header p {
     flex-wrap: wrap;
 }
 
-#listblock section {
-    margin: 15px 10px;
+#todo {
+    margin: 35px 10px 0;
+    width: 320px;
+    background-color: rgb(209, 122, 0);
+    background-image: url('../img/denim.png');
+    background-blend-mode: color-dodge;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 75%);
+    box-shadow: 0 0 14px 0 black;
+    border: 3px solid #fff;
+    border-radius: 10px;
 }
 
+#inprogress {
+    margin: 35px 10px 0;
+    width: 320px;
+    background-color: rgba(209, 77, 0);
+    background-image: url('../img/denim.png');
+    background-blend-mode: color-dodge;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 75%);
+    box-shadow: 0 0 14px 0 black;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+#done {
+    margin: 35px 10px 0;
+    width: 320px;
+    background-color: rgb(209, 21, 0);
+    background-image: url('../img/denim.png');
+    background-blend-mode: color-dodge;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 75%);
+    box-shadow: 0 0 14px 0 black;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+#inprogress h2, #done h2 {
+    margin: 18px 24px 10px;
+}
+
+.inprogress li, .done li {
+    width: 280px;
+    margin: 0 -40px 0;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+#todo h2 {
+    margin: 18px 24px 10px;
+}
 
 #todo h2::after {
     content: "✨";
     margin-left: 5px;
 }
 
+.todo li {
+    width: 280px;
+    margin: 0 -40px 0;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
 #inprogress h2::after {
-    content: "🏅";
+    content: "🥇";
     margin-left: 5px;
 }
 
@@ -70,7 +133,65 @@ header p {
     margin-left: 5px;
 }
 
-input[type="checkbox"]:checked + span::after {
+.inprogress input[type="checkbox"]:checked + span::after {
     content: "💪";
     margin-left: 5px;
+    background-color: rgb(196, 0, 0);
+    border-radius: 30%;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.done input[type="checkbox"]:checked + span::after {
+    content: "🏅";
+    margin-left: 5px;
+    background-color: rgb(82, 0, 183);
+    border-radius: 30%;
+    animation: fadeIn 0.5s;
+}
+
+.todo li:nth-child(odd) {
+
+    background-color: rgba(255, 154, 11, .9);
+}
+
+.inprogress li:nth-child(odd) {
+    background-color: rgba(209, 77, 0, .5);
+}
+
+.done li:nth-child(odd) {
+    background-color: rgba(209, 21, 0, .5);
+}
+
+section:last-child {
+    margin-top: 50px;
+}
+
+section h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    padding: 0 80px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 7px 0 12px;
+}
+
+.sticky_footer {
+    position: sticky;
+    top:100%;
+    background-color: #080012;
 }

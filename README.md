@@ -1,26 +1,24 @@
-# Cano_Carlos_hm3
+# To-do List Goku's Kamehameha
+![Fender Telecaster](img/img_goku_kamehameha.png)
 
-Project Name
-This is my homework 3 about CSS Cascade, Selection &amp; Pseudo Selectors
+## Project Name
+This is the final guide to learn Goku's Kamehameha
 
-Installation
+## Installation
 Online
 
-Usage
+## Usage
 Free to use
 
-Contributing
+## Contributing
 Fork it!
 Create your feature branch: git checkout -b my-new-feature
 Commit your changes: git commit -am 'Add some feature'
 Push to the branch: git push origin my-new-feature
 Submit a pull request :D
 
-History
-Class Homework
-
-Credits
+## Credits
 Carlos Cano
 
-License
-MIT
+## License
+MIT License

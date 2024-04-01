@@ -123,6 +123,7 @@ header p {
     overflow: hidden;
 }
 
+
 #inprogress h2::after {
     content: "🥇";
     margin-left: 5px;
@@ -151,11 +152,11 @@ header p {
     margin-left: 5px;
     background-color: rgb(82, 0, 183);
     border-radius: 30%;
+    text-decoration: none;
     animation: fadeIn 0.5s;
 }
 
 .todo li:nth-child(odd) {
-
     background-color: rgba(255, 154, 11, .9);
 }
 
@@ -165,6 +166,29 @@ header p {
 
 .done li:nth-child(odd) {
     background-color: rgba(209, 21, 0, .5);
+}
+
+.todo li:hover {
+    font-weight: 600;
+    background-color: rgb(227, 132, 0);
+}
+
+.inprogress li:hover {
+    font-weight: 600;
+    background-color: rgb(200, 73, 0);
+}
+
+.inprogress input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.done li:hover {
+    font-weight: 600;
+    background-color: rgba(209, 21, 0, 1);
+}
+
+.done input[type="checkbox"]:hover {
+    cursor: pointer;
 }
 
 section:last-child {
